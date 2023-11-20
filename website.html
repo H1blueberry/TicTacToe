@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link href="static/website.css" rel="stylesheet">
+        <title>homepage</title>
+    </head>
+    <body>
+        <h1>Tic Tac Toe</h1>
+        <p>
+            <span id="player1">Player:  X</span>
+            <span id="player2">Computer:  O</span>
+        </p>
+
+        <div id="field">
+            <div class="vl1"></div>
+            <div class="vl2"></div>
+
+            <div class="hl1"></div>
+            <div class="hl2"></div>
+
+            <form action="/", method="post">
+                <button name="field" value="upper_left" id="upper_left">{{ p["upper_left"] }}</button>
+                <button name="field" value="upper_middle" id="upper_middle">{{ p["upper_middle"] }}</button>
+                <button name="field" value="upper_right" id="upper_right">{{ p["upper_right"] }}</button>
+                <button name="field" value="middle_left" id="middle_left">{{ p["middle_left"] }}</button>
+                <button name="field" value="middle_middle" id="middle_middle">{{ p["middle_middle"] }}</button>
+                <button name="field" value="middle_right" id="middle_right">{{ p["middle_right"] }}</button>
+                <button name="field" value="bottom_left" id="bottom_left">{{ p["bottom_left"] }}</button>
+                <button name="field" value="bottom_middle" id="bottom_middle">{{ p["bottom_middle"] }}</button>
+                <button name="field" value="bottom_right" id="bottom_right">{{ p["bottom_right"] }}</button>
+            </form>
+        </div>
+        <div id="error">
+            <p>{{ error }}</p>
+        </div>
+        <div class="neu">
+            <form action="/neu", method="post">
+                <button name="neu" id="neu">Neu</button>
+            </form>
+        </div>
+    </body>
+</html>
